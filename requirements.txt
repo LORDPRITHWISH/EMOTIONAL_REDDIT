@@ -1,0 +1,7 @@
+streamlit
+googleapiclient
+re
+pandas
+TextBlob
+matplotlib
+numpy

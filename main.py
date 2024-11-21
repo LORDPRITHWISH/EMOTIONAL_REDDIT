@@ -1,6 +1,7 @@
-from codes.Analyser import main
+# from codes.Analyser import main
+from codes.anagpt import main as newmain
 # from codes.movie_maker import mkmovie
-from codes.story_extract import getstory
+# from codes.story_extract import getstory
 
 
 
@@ -17,4 +18,5 @@ LINK='https://www.reddit.com/r/robotics/'
 # print('No more stories to make movies from')
 
 
-main(LINK)
+# main(LINK)
+newmain(LINK)

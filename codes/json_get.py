@@ -2,11 +2,17 @@ import requests
 from requests.auth import HTTPBasicAuth
 from dotenv import load_dotenv
 import os
+import json
 
 def request (link):
     print("link is ",link)
     link+='.json?limit=100&sort=hot&t=all'
     res=requests.get(link)
+
+    with open('rawfull.json','w',encoding='utf-8') as sour :
+        sour.write(json.dumps(res.json(),indent=4))
+
+    print(res.json())
     aft = res.json()['data']['after']
     json_data = res.json()
     # print("data is ",json_data)
